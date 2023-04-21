@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "./mail/index.js",
+      "src": "mail/**",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
-      "dest": "/"
+      "src": "/mail/(.*)",
+      "dest": "/mail/$1"
     }
   ]
 }

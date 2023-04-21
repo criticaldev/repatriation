@@ -22,10 +22,10 @@ const transporter = nodemailer.createTransport({
 });
 
 app.get("/", (req, res) => {
-  res.render("index.html");
+  res.send("Page Not Found!");
 });
 
-app.post("/mail", (req, res) => {
+app.post("/", (req, res) => {
   const name = req.body.name;
   const email = req.body.email;
   const subject = req.body.subject;
