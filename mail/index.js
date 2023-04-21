@@ -59,6 +59,8 @@ app.post("/mail", (req, res) => {
     res.send('{"status": false, "response": "Please fill all the fields"}');
 });
 
-app.listen(port, () => {
-  console.log(`server is running on port ${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`server is running on port ${port}`);
+// });
+
+module.exports = app;
