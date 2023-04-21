@@ -21,7 +21,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.post("/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Error: 404. Page Not Found");
 });
 
