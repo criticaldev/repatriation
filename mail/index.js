@@ -6,8 +6,10 @@ const emailSubject = "Message from NRI Repatriation";
 const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
+const path = require("path");
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "")));
 app.use(bodyParser.json());
 const port = process.env.PORT || 3000;
 const transporter = nodemailer.createTransport({
@@ -22,7 +24,7 @@ const transporter = nodemailer.createTransport({
 });
 
 app.get("/", (req, res) => {
-  res.render("index.html");
+  res.sendFile(path.join(__dirname, "", "index.html"));
 });
 
 app.get("/mail", (req, res) => {
