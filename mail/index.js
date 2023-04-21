@@ -22,10 +22,10 @@ const transporter = nodemailer.createTransport({
 });
 
 app.get("/", (req, res) => {
-  res.send("Error: 404. Page Not Found");
+  res.render("index.html");
 });
 
-app.post("/", (req, res) => {
+app.post("/mail", (req, res) => {
   const name = req.body.name;
   const email = req.body.email;
   const subject = req.body.subject;
@@ -59,4 +59,6 @@ app.post("/", (req, res) => {
     res.send('{"status": false, "response": "Please fill all the fields"}');
 });
 
-app.listen(port);
+app.listen(port, () => {
+  console.log(`server is running on port ${port}`);
+});
