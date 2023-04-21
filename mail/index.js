@@ -22,8 +22,8 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.get("/", (req, res) => {
-  res.sendFile("index.html");
+app.use("/", (req, res) => {
+  res.render("index.html");
 });
 
 app.get("/mail", (req, res) => {
