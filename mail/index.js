@@ -21,8 +21,8 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.use("/", (req, res) => {
-  res.render("index.html");
+app.get("/", (req, res) => {
+  res.send("Page Not Found!");
 });
 
 app.get("/mail", (req, res) => {
