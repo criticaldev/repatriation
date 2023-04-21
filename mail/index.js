@@ -9,7 +9,7 @@ const nodemailer = require("nodemailer");
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-const port = process.env.PORT || 9002;
+const port = process.env.PORT || 3000;
 const transporter = nodemailer.createTransport({
   service: "gmail",
   auth: {
