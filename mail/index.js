@@ -8,7 +8,6 @@ const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "")));
 app.use(bodyParser.json());
 const port = process.env.PORT || 3000;
 const transporter = nodemailer.createTransport({
