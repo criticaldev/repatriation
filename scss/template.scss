@@ -52,11 +52,23 @@ nav {
             border: 2px solid $primary;
             transition: 0.3s ease;
             border-radius: 50px;
+            svg {
+              width: 16px;
+              margin-bottom: -1px;
+              margin-left: 2px;
+              path {
+                fill: #fff;
+                transition: 0.3s ease;
+              }
+            }
             &:hover {
               border: 2px solid $secondary;
               border-color: $primary;
               color: $primary;
               background-color: transparent;
+              svg path {
+                fill: $primary;
+              }
             }
           }
         }
