@@ -35,6 +35,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var backendAPI = "https://backend-repatriation.vercel.app";
 id("navButton").onclick = function () {
     classes("navigation")[0].classList.toggle("active");
 };
@@ -203,7 +204,7 @@ contactForm.onsubmit = function (e) { return __awaiter(void 0, void 0, void 0, f
                 };
                 (_a = document.getElementById("submit")) === null || _a === void 0 ? void 0 : _a.setAttribute("disabled", "disabled");
                 sending = true;
-                return [4 /*yield*/, fetch("https://backend-repatriation.vercel.app", {
+                return [4 /*yield*/, fetch(backendAPI, {
                         method: "POST",
                         body: JSON.stringify(bodyContent),
                         headers: {

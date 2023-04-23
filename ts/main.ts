@@ -1,3 +1,5 @@
+const backendAPI = "https://backend-repatriation.vercel.app";
+
 id("navButton").onclick = () => {
   classes("navigation")[0].classList.toggle("active");
 };
@@ -210,7 +212,7 @@ contactForm.onsubmit = async (e) => {
   };
   document.getElementById("submit")?.setAttribute("disabled", "disabled");
   sending = true;
-  let response = await fetch("https://backend-repatriation.vercel.app", {
+  let response = await fetch(backendAPI, {
     method: "POST",
     body: JSON.stringify(bodyContent),
     headers: {
